@@ -1,0 +1,33 @@
+﻿@model Lab21_New.Models.RegistrationResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+</head>
+<body>
+    <div> <h1> Thank you, @Model.Title @Model.FirstName @Model.LastName!</h1>
+    <p><h2>Grant Chirpus' Code Dojo appreciates your business.</h2> </p>
+    <p><h3>Below is a summary of your registration information:</h3></p>
+    <p><b>Title:</b> @Model.Title</p>
+    <p><b>First Name:</b> @Model.FirstName</p>
+    <p><b>Last Name:</b> @Model.LastName</p>
+    <p><b>Suffix:</b> @Model.Suffix</p>
+    <p><b>Address:</b> @Model.Address</p>
+    <p><b>City:</b> @Model.City</p>
+    <p><b>State:</b> @Model.State</p>
+    <p><b>Email:</b> @Model.Email</p>
+    <p><b>Phone:</b> @Model.Phone</p>
+    <p><b>Zip Code:</b> @Model.ZipCode</p>
+    <p><b>DOB:</b> @Model.DOB</p>
+    <p><b>Gender:</b> @Model.Gender</p>
+       
+    </div>
+</body>
+</html>

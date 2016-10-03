@@ -1,0 +1,70 @@
+﻿@model Lab21_New.Models.RegistrationResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RegForm</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {   @Html.ValidationSummary();
+        <h2>Please fill out the registration form below:</h2>
+        <p><b>Title: @Html.DropDownListFor(x => x.Title, new[] {new SelectListItem() {Text="" },
+    new SelectListItem() {Text = "Miss" }, new SelectListItem() {Text = "Ms." },
+     new SelectListItem() {Text = "Mrs." }, new SelectListItem() {Text = "Mr." }, new SelectListItem() {Text = "Dr." } })</b> </p>
+       <p><b> First Name: @Html.TextBoxFor(x => x.FirstName)</b> </p>
+       <p><b>Last Name: @Html.TextBoxFor(x => x.LastName)</b></p>
+       <p><b>Suffix: @Html.DropDownListFor(x => x.Suffix, new[] {new SelectListItem() {Text="" },
+    new SelectListItem() {Text = "Jr." }, new SelectListItem() {Text = "Sr." } })</b></p>
+    <p><b>Street Address: @Html.TextBoxFor(x => x.Address)</b></p>
+    <p><b>City: @Html.TextBoxFor(x => x.City)</b></p>
+    <p><b>
+    State: @Html.DropDownListFor(x => x.State, new[] {new SelectListItem() {Text="" },
+    new SelectListItem() {Text ="AL" }, new SelectListItem() {Text = "AK" }, new SelectListItem() {Text = "AZ" },
+    new SelectListItem() {Text="AR" }, new SelectListItem() {Text = "CA" }, new SelectListItem() {Text = "CO" },
+    new SelectListItem() {Text="CO" }, new SelectListItem() {Text="CT" }, new SelectListItem() {Text="DE" },
+    new SelectListItem() {Text="FL" }, new SelectListItem() {Text = "GA" }, new SelectListItem() {Text="HI" },
+    new SelectListItem() {Text="ID" }, new SelectListItem() {Text ="IL" }, new SelectListItem() {Text= "IN" },
+    new SelectListItem() {Text="IA" }, new SelectListItem() {Text="KS" }, new SelectListItem() {Text="KY" },
+    new SelectListItem() {Text="LA" }, new SelectListItem() {Text="ME" }, new SelectListItem() {Text="MD" },
+    new SelectListItem() {Text="MA" }, new SelectListItem() {Text="MI" }, new SelectListItem() {Text="MN" },
+    new SelectListItem() {Text="MS" }, new SelectListItem() {Text="MO" }, new SelectListItem() {Text="MT" },
+    new SelectListItem() {Text="NE" }, new SelectListItem() {Text="NV" }, new SelectListItem() {Text="NH" },
+    new SelectListItem() {Text="NJ" }, new SelectListItem() {Text="NM" }, new SelectListItem() {Text="NY" },
+    new SelectListItem() {Text="NC" }, new SelectListItem() {Text ="ND" }, new SelectListItem() {Text="OH" },
+    new SelectListItem() {Text ="OK" }, new SelectListItem() {Text="OR" }, new SelectListItem() {Text="PA" },
+    new SelectListItem() {Text="RI" }, new SelectListItem() {Text="SC" }, new SelectListItem() {Text="SD" },
+    new SelectListItem() {Text="TN" }, new SelectListItem() {Text="TX" }, new SelectListItem() {Text="UT" },
+    new SelectListItem() {Text="VT" }, new SelectListItem() {Text="VA" }, new SelectListItem() {Text="WA" },
+    new SelectListItem() {Text="WV" }, new SelectListItem() {Text="WI" }, new SelectListItem() {Text="WY" } })
+</b></P>
+    <p><b>Zip Code: @Html.TextBoxFor(x => x.ZipCode)</b></p>
+    <p><b>Email: @Html.TextBoxFor(x => x.Email)</b></p>
+    <p><b>Phone Number (###-###-####): @Html.TextBoxFor(x => x.Phone)</b></p>
+    <p><b>DOB (MM/DD/YYYY): @Html.TextBoxFor(x => x.DOB)</b></p>
+    <p><b>
+    Gender: @Html.RadioButtonFor(x => x.Gender, "Female", false)
+</b>@Html.Label("Female")
+    @Html.RadioButtonFor(x => x.Gender, "Male", false)@Html.Label("Male")
+    @Html.RadioButtonFor(x => x.Gender, "Other", false)@Html.Label("Other")
+</p>
+    <input type="submit" value="Submit Registration" />
+
+
+
+
+
+
+
+
+
+
+    }
+</body>
+</html>
